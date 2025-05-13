@@ -2,7 +2,7 @@
 The implementation of GGMF
 # GGMF
 
-![image-20250513141819825](GGMF.png)
+![image-20250513141819825](GGMF.jpg)
 
 ## Abstract
 
