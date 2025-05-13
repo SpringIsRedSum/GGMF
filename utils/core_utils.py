@@ -775,21 +775,21 @@ def _summary(dataset_factory, model, modality, loader, loss_fn, survival_train=N
                 # 先调用模型获取输出
                 h = model(**input_args)
 
-                print("core_util 750")
-                # 然后检查是否有基因重要性信息
-                if hasattr(model, 'gene_importance') and hasattr(loader.dataset, 'gene_names'):
-                    gene_importance = model.gene_importance.cpu().numpy()
-                    gene_names = loader.dataset.gene_names
+                # print("core_util 750")
+                # # 然后检查是否有基因重要性信息
+                # if hasattr(model, 'gene_importance') and hasattr(loader.dataset, 'gene_names'):
+                #     gene_importance = model.gene_importance.cpu().numpy()
+                #     gene_names = loader.dataset.gene_names
 
-                    # 获取前10个重要的基因
-                    top_10_indices = np.argsort(gene_importance)[-10:][::-1]
-                    top_10_genes = [gene_names[i] for i in top_10_indices]
-                    top_10_importance = gene_importance[top_10_indices]
+                #     # 获取前10个重要的基因
+                #     top_10_indices = np.argsort(gene_importance)[-10:][::-1]
+                #     top_10_genes = [gene_names[i] for i in top_10_indices]
+                #     top_10_importance = gene_importance[top_10_indices]
 
-                    # 打印结果
-                    print("\nTop 10 Important Genes:")
-                    for gene, importance in zip(top_10_genes, top_10_importance):
-                        print("%s: %.4f" % (gene, importance))
+                #     # 打印结果
+                #     print("\nTop 10 Important Genes:")
+                #     for gene, importance in zip(top_10_genes, top_10_importance):
+                #         print("%s: %.4f" % (gene, importance))
 
                     # # 将基因重要性信息添加到结果中
                     # if "gene_importance" not in patient_results[case_id]:
