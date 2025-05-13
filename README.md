@@ -2,7 +2,7 @@
 The implementation of GGMF
 # GGMF
 
-![image-20250513141819825](C:\Users\hello_xmj\AppData\Roaming\Typora\typora-user-images\image-20250513141819825.png)
+![image-20250513141819825](GGMF.png)
 
 ## Abstract
 
